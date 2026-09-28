@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<title>Как клиника выбралась из кризиса: опрос и PDF-история</title>
+<meta name="description" content="Ответьте на 6 вопросов и получите PDF-историю: как клиника нашла причины оттока пациентов и снова заполнила запись. Бесплатно, около минуты.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ffdb4d'/%3E%3Cpath d='M26 14h12v12h12v12H38v12H26V38H14V26h12z' fill='%231a1a1a'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ffdb4d'/%3E%3Cpath d='M26 14h12v12h12v12H38v12H26V38H14V26h12z' fill='%231a1a1a'/%3E%3C/svg%3E">
+<link rel="preload" href="https://yastatic.net/s3/home/fonts/ys/4/text-regular.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'YS Text';src:url(https://yastatic.net/s3/home/fonts/ys/4/text-regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'YS Text';src:url(https://yastatic.net/s3/home/fonts/ys/4/text-medium.woff2) format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'YS Text';src:url(https://yastatic.net/s3/home/fonts/ys/4/text-bold.woff2) format('woff2');font-weight:600 700;font-style:normal;font-display:swap}
+</style>
+<style>
+:root{
+  --bg:#171717; --white:#232323; --field:#2f2f2f; --pill:#2f2f2f; --blue-pale:#333; --blue-light:#444; --blue-mid:#7c74ff;
+  --blue:#8a7dff; --blue-dark:#c4beff; --text:#f2f2f2; --text-soft:#b8b8b8; --text-muted:#808080;
+  --grad:linear-gradient(90deg,#ff4f8b,#8a4dff 55%,#3d7bff);
+  --line:#333; --r:22px; --r-sm:22px;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
+html,body{min-height:100%;background:var(--bg);font-family:'YS Text','Yandex Sans Text','Yandex Sans','Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased}
+.top,.card,.foot{position:relative;z-index:1}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;min-height:100dvh;padding:24px 16px 32px}
+.top{width:100%;max-width:600px;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.brand{font-size:13px;font-weight:500;color:var(--text-soft);background:var(--pill);padding:9px 16px;border-radius:99px}
+.reward{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:500;color:var(--text-soft);background:var(--pill);padding:9px 16px;border-radius:99px;transition:background .3s,color .3s}
+.reward svg{width:14px;height:14px}
+.reward.open{background:var(--grad);color:#fff}
+.card{width:100%;max-width:600px;background:var(--white);border:1px solid var(--line);border-radius:28px;padding:32px 36px 28px;}
+.bar{height:4px;background:var(--blue-pale);border-radius:99px;overflow:hidden;margin-bottom:12px}
+.bar i{display:block;height:100%;width:8%;background:var(--grad);border-radius:99px;transition:width .5s cubic-bezier(.4,0,.2,1)}
+.meta{display:flex;justify-content:space-between;font-size:13px;color:var(--text-muted);font-weight:500;margin-bottom:28px}
+.step{display:none;animation:in .35s ease both}
+.step.active{display:block}
+@keyframes in{from{opacity:0}to{opacity:1}}
+h1{font-size:25px;line-height:1.3;font-weight:600;margin-bottom:8px}
+.hint{font-size:14px;color:var(--text-soft);line-height:1.5;margin-bottom:22px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;font:inherit;color:var(--text);background:var(--field);border:1.5px solid transparent;border-radius:var(--r-sm);padding:15px 20px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{background:#383838}
+.opt .k{flex:none;width:18px;height:18px;border-radius:50%;border:2px solid #5a5a5a;background:transparent;transition:border-color .15s,background .15s,box-shadow .15s}
+.opt .t{font-size:15px;line-height:1.4;font-weight:500}
+.opt.sel{border-color:var(--blue);background:#2c2a44}
+.opt.sel .k{border-color:var(--blue);background:var(--blue);box-shadow:inset 0 0 0 3px #2c2a44}
+.back{margin-top:18px;background:none;border:none;font:inherit;font-size:14px;font-weight:500;color:var(--text-muted);cursor:pointer;padding:6px 0}
+.back:hover{color:var(--blue)}
+.note{display:flex;gap:12px;background:var(--field);border-radius:20px;padding:14px 16px;margin-bottom:20px;font-size:14px;line-height:1.5;color:var(--text-soft)}
+.note svg{flex:none;width:20px;height:20px;margin-top:1px}
+.note b{color:var(--blue-dark);font-weight:600}
+label{display:block;font-size:13px;font-weight:600;color:var(--text-soft);margin-bottom:6px}
+.f{margin-bottom:14px}
+input{width:100%;height:52px;padding:0 22px;font:inherit;font-size:16px;font-weight:500;color:var(--text);background:var(--field);border:1.5px solid transparent;border-radius:99px;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(138,125,255,.25)}
+input.err{border-color:#e5484d}
+input::placeholder{color:var(--text-muted);font-weight:400}
+input{color-scheme:dark}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:52px;margin-top:6px;font:inherit;font-size:16px;font-weight:600;color:#fff;background:var(--grad);border:none;border-radius:99px;cursor:pointer;transition:background .15s,transform .1s}
+.btn:hover{filter:brightness(1.12)}
+.btn:active{transform:scale(.99)}
+.btn:disabled{background:#333;color:#808080;cursor:default;filter:none}
+.btn.alt{background:var(--field);color:var(--text);border:none;margin-top:10px}
+.btn.alt:hover{background:#3a3a3a;filter:none}
+.fine{margin-top:12px;text-align:center;font-size:12px;line-height:1.5;color:var(--text-muted)}
+.center{text-align:center}
+.spin{width:44px;height:44px;margin:24px auto 22px;border:3px solid var(--blue-pale);border-top-color:var(--blue);border-radius:50%;animation:r .8s linear infinite}
+@keyframes r{to{transform:rotate(360deg)}}
+.checks{display:inline-flex;flex-direction:column;gap:10px;text-align:left;margin:8px 0 12px}
+.checks div{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--text-muted);font-weight:500;transition:color .3s}
+.checks div::before{content:'';width:18px;height:18px;flex:none;border-radius:50%;border:2px solid var(--line);transition:all .3s}
+.checks div.ok{color:var(--text)}
+.checks div.ok::before{background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat;border-color:var(--blue)}
+.done-ic{width:64px;height:64px;margin:0 auto 20px;border-radius:50%;background:var(--blue-pale);display:flex;align-items:center;justify-content:center}
+.done-ic svg{width:30px;height:30px}
+.sum{text-align:left;background:var(--field);border-radius:20px;padding:16px 18px;margin:0 0 20px;font-size:14px;line-height:1.55;color:var(--text-soft)}
+.sum b{color:var(--text);font-weight:600}
+.reader{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:16px}
+.reader.on{display:flex}
+.reader .box{width:100%;max-width:820px;height:100%;max-height:92vh;background:var(--white);border-radius:28px;display:flex;flex-direction:column;overflow:hidden}
+.reader .bar2{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--line);font-size:14px;font-weight:600;color:var(--text-soft)}
+.reader .x{background:var(--blue-pale);color:var(--blue-dark);border:none;border-radius:99px;font:inherit;font-size:13px;font-weight:600;padding:7px 14px;cursor:pointer}
+.reader iframe{flex:1;border:0;width:100%}
+.reader .stub{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px;color:var(--text-muted);font-size:15px;line-height:1.6}
+.chk{display:flex;gap:12px;align-items:flex-start;margin:4px 0 14px;font-size:13px;line-height:1.5;color:var(--text-soft);font-weight:400;cursor:pointer}
+.chk input{width:20px;height:20px;flex:none;padding:0;margin-top:1px;accent-color:#7a6bff;cursor:pointer}
+.chk a,.foot a{color:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.chk a:hover,.foot a:hover{color:var(--blue-dark)}
+.hero{font-size:26px;line-height:1.3;font-weight:600;margin-bottom:8px}
+.outl{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 24px}
+.outl span{padding:11px 18px;border:1.5px solid var(--blue-light);border-radius:99px;font-size:14px;font-weight:500;color:var(--text)}
+.tags span{background:var(--field);border-radius:99px;padding:9px 15px;font-size:13px;color:var(--text-soft)}
+.list{list-style:none;margin:0 0 24px;border-top:1px solid var(--line)}
+.list li{padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.45;color:var(--text)}
+.list li span{display:block;font-size:13px;color:var(--text-soft);margin-top:2px}
+.doc{flex:1;overflow:auto;padding:24px 28px 32px;font-size:14px;line-height:1.65;color:var(--text-soft)}
+.doc h2{font-size:20px;line-height:1.3;color:var(--text);margin-bottom:4px}
+.doc h3{font-size:15px;color:var(--text);margin:20px 0 6px}
+.doc p,.doc li{margin-bottom:8px}.doc ul{padding-left:20px}.doc b{color:var(--text)}.doc .d{font-size:12px;color:var(--text-muted);margin-bottom:8px}
+.foot{max-width:600px;line-height:1.9;margin-top:16px;font-size:12px;color:var(--text-muted);text-align:center}
+#stage.tall{min-height:440px}
+@media(max-width:520px){#stage.tall{min-height:0}
+.hero{font-size:23px}.card{padding:24px 18px 22px;border-radius:24px}h1{font-size:22px}}
+
+/* ===== Полировка: тёмный стиль сервисов Яндекса ===== */
+html{-webkit-text-size-adjust:100%}
+*{-webkit-tap-highlight-color:transparent}
+::selection{background:rgba(138,125,255,.4);color:#fff}
+::placeholder{opacity:1}
+*{scrollbar-width:thin;scrollbar-color:#444 transparent}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-thumb{background:#444;border-radius:99px}
+h1{letter-spacing:-.005em}
+.hint{font-size:15px}
+.card{background:linear-gradient(180deg,#262626,#202020);border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:34px 38px 30px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.brand,.reward{border:1px solid rgba(255,255,255,.06)}
+.brand{display:flex;align-items:center;gap:8px}
+.brand::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.reward.open{border-color:transparent;box-shadow:0 6px 20px rgba(138,77,255,.35)}
+.bar{height:6px;background:#333}
+.bar i{box-shadow:0 0 12px rgba(138,77,255,.6)}
+.meta{font-variant-numeric:tabular-nums}
+.opt{min-height:58px;border:1.5px solid rgba(255,255,255,.04);transition:background .15s,border-color .15s,transform .1s}
+.opt:hover{background:#383838;border-color:rgba(255,255,255,.1)}
+.opt:active{transform:scale(.995)}
+.opt.sel{border-color:var(--blue);background:#2c2a44;box-shadow:0 0 0 3px rgba(138,125,255,.18)}
+.btn{height:54px;box-shadow:0 10px 28px rgba(138,77,255,.3);transition:filter .15s,transform .1s,box-shadow .15s}
+.btn:hover{filter:brightness(1.1);box-shadow:0 12px 32px rgba(138,77,255,.4)}
+.btn:disabled{box-shadow:none}
+.btn.alt{box-shadow:none;border:1.5px solid rgba(255,255,255,.08)}
+input:not([type=checkbox]){height:54px;background:#2a2a2a;border:1.5px solid rgba(255,255,255,.06)}
+input:not([type=checkbox]):hover{background:#303030}
+input:not([type=checkbox]):focus{background:#2a2a2a;border-color:var(--blue)}
+input:-webkit-autofill{-webkit-text-fill-color:#f2f2f2;-webkit-box-shadow:0 0 0 60px #2a2a2a inset;caret-color:#f2f2f2}
+label{letter-spacing:.005em}
+.chk input{-webkit-appearance:none;appearance:none;width:22px;height:22px;border:2px solid #5a5a5a;border-radius:7px;background:transparent;transition:background .15s,border-color .15s}
+.chk input:checked{border-color:transparent;background:var(--grad) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat}
+.outl span{border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.03)}
+.done-ic{border:2px solid transparent;background:linear-gradient(#262626,#262626) padding-box,var(--grad) border-box}
+.sum{border:1px solid rgba(255,255,255,.06);background:#2a2a2a}
+.foot{margin-top:18px;color:#7a7a7a}
+.foot a:hover{color:#fff}
+.reader{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.reader .box{border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.reader .x{background:#333;color:#fff;transition:background .15s}
+.reader .x:hover{background:#444}
+.doc h2{font-size:22px}
+.doc h3{border-top:1px solid var(--line);padding-top:16px}
+.doc h2+.d+h3{border-top:none;padding-top:0}
+:focus-visible{outline:2px solid #a89fff;outline-offset:3px}
+input:focus-visible{outline:none}
+.step{animation-duration:.25s}
+@media(max-width:520px){.card{padding:26px 18px 22px;border-radius:26px}.top{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== Кнопки и акценты как в тёмном поиске Яндекса ===== */
+:root{--bg:#16171a;--white:#23252a;--field:#34373f;--pill:#30333b;--blue:#ffdb4d;--blue-dark:#ffdb4d;--blue-mid:#ffdb4d;--line:#363941;--yel:#ffdb4d;--sec:#454b5c}
+.card{background:linear-gradient(180deg,#26282d,#212328);border-radius:26px}
+.btn{height:50px;border-radius:14px;background:var(--yel);color:#1a1a1a;font-size:16px;font-weight:500;box-shadow:none;letter-spacing:.005em}
+.btn:hover{filter:none;background:#ffd633;box-shadow:none}
+.btn:active{transform:scale(.99);background:#f5c918}
+.btn:disabled{background:#3a3d46;color:#8a8d96}
+.btn.alt{background:var(--sec);color:#fff;border:none}
+.btn.alt:hover{background:#525969}
+.bar i{background:var(--yel);box-shadow:none}
+.opt{border-radius:16px}
+.opt.sel{border-color:var(--yel);background:#33301f;box-shadow:0 0 0 3px rgba(255,219,77,.16)}
+.opt.sel .k{border-color:var(--yel);background:var(--yel);box-shadow:inset 0 0 0 3px #33301f}
+.opt:hover{background:#3b3e47}
+input:not([type=checkbox]){border-radius:14px;background:#2d3037}
+input:not([type=checkbox]):focus{border-color:var(--yel);box-shadow:0 0 0 3px rgba(255,219,77,.18)}
+input:-webkit-autofill{-webkit-box-shadow:0 0 0 60px #2d3037 inset}
+.chk input:checked{background:var(--yel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a1a1a' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat}
+.chk a,.foot a:hover,.back:hover{color:var(--yel)}
+.chk a{text-decoration-color:rgba(255,219,77,.5)}
+.reward.open{background:var(--yel);color:#1a1a1a;box-shadow:none}
+.brand::before{background:var(--yel)}
+.done-ic{background:linear-gradient(#23252a,#23252a) padding-box,var(--yel) border-box}
+.done-ic svg{stroke:#ffdb4d}
+.sum,.note{border-radius:16px;background:#2d3037}
+.reader .box{border-radius:24px}
+:focus-visible{outline-color:var(--yel)}
+::selection{background:rgba(255,219,77,.35)}
+/* ===== Первый экран ===== */
+.eyebrow{font-size:13px;font-weight:600;color:var(--yel);margin-bottom:12px}
+.hero{font-size:30px;line-height:1.18;font-weight:700;letter-spacing:-.01em;margin-bottom:26px;max-width:470px}
+.rows{list-style:none;margin:0 0 26px;display:flex;flex-direction:column;gap:6px}
+.rows li{display:flex;align-items:center;gap:16px;padding:12px 14px;border-radius:16px;background:#2b2e35}
+.rows i{flex:none;width:44px;height:44px;border-radius:13px;background:#383c45;display:flex;align-items:center;justify-content:center}
+.rows i svg{width:22px;height:22px}
+.rows b{display:block;font-size:16px;font-weight:600;color:var(--text);margin-bottom:2px}
+.rows span{display:block;font-size:14px;line-height:1.4;color:var(--text-soft)}
+@media(max-width:520px){.hero{font-size:25px;margin-bottom:22px}.rows li{padding:11px 12px;gap:13px}}
+.hero,h1{text-wrap:balance}
+
+/* ===== Фон: мягкие градиенты ===== */
+html{min-height:100%;background:
+  radial-gradient(70% 55% at 50% 110%,rgba(255,150,40,.34),transparent 70%),
+  radial-gradient(45% 45% at 0% 100%,rgba(255,219,77,.16),transparent 70%),
+  radial-gradient(50% 45% at 100% 0%,rgba(96,120,200,.20),transparent 70%),
+  var(--bg);background-attachment:fixed}
+body{background:transparent}
+.card{box-shadow:0 12px 40px rgba(0,0,0,.28)}
+.eyebrow{margin-bottom:10px}
+.hero{margin-bottom:10px;max-width:none}
+.lead{font-size:16px;line-height:1.5;color:var(--text-soft);margin-bottom:24px;max-width:470px}
+.rows li{padding:14px 18px}
+.top{display:none}
+
+/* ===== Яндекс Браузер: чёрная тема ===== */
+:root{--bg:#000;--white:#1c1c1e;--field:#262628;--pill:#262628;--line:#2c2c2e;--text:#fff;--text-soft:#a8a8ad;--text-muted:#77777c;--yel:#ffdb4d;--sec:#333336;--r:16px;--r-sm:16px}
+html{background:
+  radial-gradient(60% 45% at 50% 112%,rgba(255,140,50,.26),transparent 72%),
+  radial-gradient(42% 40% at 100% 0%,rgba(130,90,255,.18),transparent 72%),
+  radial-gradient(40% 35% at 0% 100%,rgba(255,219,77,.10),transparent 72%),
+  #000;background-attachment:fixed}
+body{letter-spacing:0}
+.card{background:#1c1c1e;border:none;border-radius:24px;padding:32px;box-shadow:none}
+.bar{height:4px;background:#2c2c2e}
+.meta{margin-bottom:24px;color:#77777c}
+h1{font-size:24px;line-height:1.25;font-weight:700;letter-spacing:-.02em}
+.hero{font-size:32px;line-height:1.15;font-weight:700;letter-spacing:-.025em}
+.hint,.lead{color:#a8a8ad}
+.opts{gap:8px}
+.opt{min-height:56px;padding:14px 18px;background:#262628;border:1.5px solid transparent;border-radius:16px}
+.opt:hover{background:#2e2e31;border-color:transparent}
+.opt .k{border-color:#5a5a5f}
+.opt.sel{background:#2b2717;border-color:var(--yel);box-shadow:none}
+.opt.sel .k{border-color:var(--yel);background:var(--yel);box-shadow:inset 0 0 0 3px #2b2717}
+.rows{gap:8px}
+.rows li{background:#262628;border-radius:16px;padding:14px 18px}
+.btn{height:52px;border-radius:14px;background:var(--yel);color:#000;font-weight:500}
+.btn:hover{background:#ffd633}
+.btn.alt{background:#333336;color:#fff}
+.btn.alt:hover{background:#3d3d41}
+.btn:disabled{background:#2c2c2e;color:#77777c}
+input:not([type=checkbox]){height:52px;border-radius:14px;background:#262628;border:1.5px solid transparent}
+input:not([type=checkbox]):hover{background:#2e2e31}
+input:not([type=checkbox]):focus{background:#262628;border-color:var(--yel);box-shadow:none}
+input:-webkit-autofill{-webkit-box-shadow:0 0 0 60px #262628 inset}
+.chk input{border-radius:6px;border-color:#5a5a5f}
+.sum,.note{background:#262628;border:none;border-radius:16px}
+.done-ic{background:linear-gradient(#1c1c1e,#1c1c1e) padding-box,var(--yel) border-box}
+.foot{color:#66666b}
+.reader{background:rgba(0,0,0,.75)}
+.reader .box{background:#1c1c1e;border:none;border-radius:24px}
+.reader .x{background:#333336}
+.reader .x:hover{background:#3d3d41}
+@media(max-width:520px){.card{padding:24px 16px;border-radius:22px}.hero{font-size:26px}h1{font-size:22px}}
+#sF .fine{margin-bottom:0}
+.card.done{padding-bottom:20px}
+#sF h1{margin-bottom:14px}
+input.err:not([type=checkbox]){border-color:#ff6b6b}
+.cust{display:none;margin-top:10px}.cust.on{display:block}
+.cust .btn{margin-top:10px}
+.opts{transition:opacity .3s}.opts.lock{pointer-events:none;opacity:.45}
+
+/* ===== Доп. поля контактов ===== */
+label em{font-style:normal;font-weight:400;color:var(--text-muted)}
+.roles{display:flex;flex-wrap:wrap;gap:8px}
+.role{font:inherit;font-size:14px;font-weight:500;color:var(--text);background:#262628;border:1.5px solid transparent;border-radius:12px;padding:11px 16px;cursor:pointer;transition:background .15s,border-color .15s}
+.role:hover{background:#2e2e31}
+.role.sel{background:#2b2717;border-color:var(--yel)}
+
+/* ===== Кнопки: состояние «скачивается» ===== */
+.btn.busy{pointer-events:none}
+.btn.busy::before{content:'';flex:none;width:16px;height:16px;border:2px solid rgba(255,255,255,.22);border-top-color:#fff;border-radius:50%;animation:r .7s linear infinite}
+
+/* ===== Окно чтения PDF ===== */
+.reader{padding:20px;overscroll-behavior:contain}
+.reader.on{animation:rFade .22s ease both}
+.reader.on .box{animation:rPop .32s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rFade{from{opacity:0}to{opacity:1}}
+@keyframes rPop{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+.reader .box{max-width:1040px;max-height:none;height:100%;background:#151517;border:1px solid rgba(255,255,255,.07);box-shadow:0 30px 90px rgba(0,0,0,.6);position:relative}
+.reader .bar2{gap:12px;padding:12px 14px 12px 22px;border-bottom:none;background:#1c1c1e;color:var(--text);font-size:15px;font-weight:600;letter-spacing:-.005em;flex:none}
+.reader .bar2>span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.reader .tools{display:flex;align-items:center;gap:8px;flex:none}
+.reader .pg{font-size:13px;font-weight:600;color:var(--text-soft);background:#262628;border-radius:10px;padding:0 12px;height:38px;display:inline-flex;align-items:center;font-variant-numeric:tabular-nums;white-space:nowrap}
+.reader .pg:empty{display:none}
+.reader .ib{width:38px;height:38px;padding:0;display:inline-flex;align-items:center;justify-content:center;background:#262628;color:#fff;border:none;border-radius:12px;cursor:pointer;position:relative;transition:background .15s,color .15s,transform .1s}
+.reader .ib svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.reader .ib:hover{background:#333336}
+.reader .ib:active{transform:scale(.94)}
+.reader .ib.dlx:hover{background:var(--yel);color:#000}
+.reader .ib.x:hover{background:#3d3d41}
+.reader .ib.busy{pointer-events:none}
+.reader .ib.busy svg{opacity:0}
+.reader .ib.busy::after{content:'';position:absolute;inset:0;margin:auto;width:16px;height:16px;border:2px solid rgba(255,255,255,.22);border-top-color:var(--yel);border-radius:50%;animation:r .7s linear infinite}
+.reader .box:not(.pdf) .pg,.reader .box:not(.pdf) .dlx{display:none}
+.rprog{height:2px;background:#232326;flex:none;overflow:hidden}
+.rprog i{display:block;height:100%;width:0;background:var(--yel);box-shadow:0 0 10px rgba(255,219,77,.55);transition:width .08s linear}
+#readerBody{position:relative;min-height:0}
+.reader .pdfv{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;background:#0c0c0e;display:flex;flex-direction:column;gap:8px}
+.reader .pdfv canvas{display:block;flex:none;width:100%;height:auto;background:#1c1c1e;opacity:0;transition:opacity .35s ease}
+.reader .pdfv canvas.ok{opacity:1}
+.reader iframe{background:#0c0c0e;color-scheme:dark}
+.reader .doc{background:#1c1c1e}
+.reader .stub{background:#0c0c0e}
+.rload{display:flex;flex-direction:column;align-items:center;gap:16px;font-size:14px;font-weight:500;color:var(--text-soft)}
+.rload i{width:40px;height:40px;border:3px solid #2c2c2e;border-top-color:var(--yel);border-radius:50%;animation:r .8s linear infinite}
+
+/* ===== Скроллбары ===== */
+html{scrollbar-color:#3a3a3f #000}
+.reader,.reader *{scrollbar-width:thin;scrollbar-color:#45454b transparent}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-corner{background:transparent}
+::-webkit-scrollbar-thumb{background:#3a3a3f;border:3px solid transparent;background-clip:padding-box;border-radius:99px;min-height:56px;transition:background .15s}
+::-webkit-scrollbar-thumb:hover{background:#5a5a61;background-clip:padding-box}
+::-webkit-scrollbar-thumb:active{background:var(--yel);background-clip:padding-box}
+.reader .pdfv::-webkit-scrollbar-track{background:#0c0c0e;border-left:1px solid rgba(255,255,255,.04)}
+.reader .doc::-webkit-scrollbar-track{background:#1c1c1e}
+@media(max-width:600px){
+  .reader{padding:8px}
+  .reader .box{border-radius:20px}
+  .reader .bar2{padding:10px 10px 10px 16px}
+  .reader .pdfv{gap:6px}
+  ::-webkit-scrollbar{width:8px}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="brand">Диагностика клиники</div>
+  <div class="reward" id="reward">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+    <span id="rewardTxt">Гайд закрыт</span>
+  </div>
+</div>
+
+<div class="card">
+  <div id="head">
+    <div class="bar"><i id="fill"></i></div>
+    <div class="meta"><span id="metaL">Вопрос 1 из 5</span><span id="metaR">≈ 1 минута</span></div>
+  </div>
+  <div id="stage"></div>
+</div>
+<div class="foot">
+  <a data-doc="privacy">Политика конфиденциальности</a> · <a data-doc="consent">Согласие на обработку данных</a> · <a data-doc="cookies">Политика cookie</a> · <a data-doc="terms">Пользовательское соглашение</a><br>
+  <span id="opLine"></span>
+</div>
+
+<div class="reader" id="reader" role="dialog" aria-modal="true" aria-labelledby="readerTitle"><div class="box" id="rbox">
+  <div class="bar2"><span id="readerTitle">История клиники</span>
+    <div class="tools">
+      <span class="pg" id="pgInd"></span>
+      <button class="ib dlx" id="dl2" type="button" aria-label="Скачать PDF" title="Скачать PDF"><svg viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7 11l5 5 5-5"/><path d="M5 20h14"/></svg></button>
+      <button class="ib x" id="closeR" type="button" aria-label="Закрыть" title="Закрыть (Esc)"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+  <div class="rprog"><i id="rprog"></i></div>
+  <div id="readerBody" class="stub"></div>
+</div></div>
+
+<script>
+// ===== НАСТРОЙКИ =====
+const CONFIG = {
+  STEP_DELAY: 1000, // минимум мс на каждом вопросе, пока ответ нельзя выбрать
+  METRIKA_ID: '', // номер счётчика Яндекс Метрики: включит цели для Директа
+  ENDPOINT: '',   // URL обработчика заявок (Google Sheets / Telegram / CRM). Пусто: только localStorage и консоль
+  PDF_URL:  'Pustoe-kreslo (1).pdf',   // ссылка на PDF (для чтения на сайте и скачивания)
+  PDF_NAME: 'Pustoe-kreslo (1).pdf',
+  // Реквизиты оператора (подставляются в тексты документов автоматически)
+  OPERATOR_FULL: 'Индивидуальный предприниматель Ильиных Егор Денисович', SHORT: 'ИП Ильиных Е. Д.',
+  INN: '667119909961', OGRNIP: '325665800242272',
+  ADDRESS: 'г. Екатеринбург, ул. Начдива Онуфриева, д. 34', EMAIL: 'egorilinykh10@gmail.com', PHONE: '+7 (913) 462-62-25',
+  DOCS_DATE: '28 сентября 2026 г.'
+};
+CONFIG.SITE = location.host || 'сайт';
+const DOCS = {
+privacy:{t:'Политика конфиденциальности', html:`
+<h2>Политика в отношении обработки персональных данных</h2>
+<p class="d">Редакция от {{DOCS_DATE}}. Действует с момента публикации на сайте {{SITE}}.</p>
+
+<h3>1. Общие положения</h3>
+<p>1.1. Настоящая Политика в отношении обработки персональных данных (далее — Политика) составлена в соответствии с п. 2 ч. 1 ст. 18.1 Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных» (далее — Закон о персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению их безопасности, принимаемые оператором.</p>
+<p>1.2. Оператор персональных данных — {{OPERATOR_FULL}}, ИНН {{INN}}, ОГРНИП {{OGRNIP}}, адрес: {{ADDRESS}}, e-mail: {{EMAIL}}, телефон: {{PHONE}} (далее — Оператор).</p>
+<p>1.3. Политика распространяется на все персональные данные, которые Оператор получает от пользователей сайта {{SITE}} (далее — Сайт), в том числе при прохождении опроса, заполнении формы контактов и использовании Сайта.</p>
+<p>1.4. Политика является общедоступным документом. В соответствии с ч. 2 ст. 18.1 Закона о персональных данных она размещена на Сайте, чтобы любой пользователь мог с ней ознакомиться до передачи своих данных.</p>
+<p>1.5. Политика разработана в соответствии с Конституцией Российской Федерации (ст. 23 и 24), Гражданским кодексом Российской Федерации, Федеральным законом от 27.07.2006 № 149-ФЗ «Об информации, информационных технологиях и о защите информации», Федеральным законом от 13.03.2006 № 38-ФЗ «О рекламе», Федеральным законом от 07.07.2003 № 126-ФЗ «О связи», постановлением Правительства Российской Федерации от 01.11.2012 № 1119 «Об утверждении требований к защите персональных данных при их обработке в информационных системах персональных данных», постановлением Правительства Российской Федерации от 15.09.2008 № 687 и иными нормативными правовыми актами Российской Федерации.</p>
+<p>1.6. Передавая свои данные через формы Сайта и отмечая согласие, пользователь подтверждает, что ознакомился с Политикой. Согласие на обработку персональных данных оформляется отдельным документом — «Согласие на обработку персональных данных», размещённым на Сайте, в соответствии с ч. 1 ст. 9 Закона о персональных данных.</p>
+
+<h3>2. Основные понятия</h3>
+<p>2.1. В Политике используются понятия в значении, определённом ст. 3 Закона о персональных данных:</p>
+<ul>
+<li><b>персональные данные</b> — любая информация, относящаяся к прямо или косвенно определённому или определяемому физическому лицу (субъекту персональных данных);</li>
+<li><b>оператор</b> — лицо, самостоятельно или совместно с другими лицами организующее и (или) осуществляющее обработку персональных данных, а также определяющее цели обработки, состав данных и действия с ними;</li>
+<li><b>обработка персональных данных</b> — любое действие (операция) или совокупность действий с персональными данными, совершаемых с использованием средств автоматизации или без их использования, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (предоставление, доступ), обезличивание, блокирование, удаление, уничтожение;</li>
+<li><b>автоматизированная обработка</b> — обработка с помощью средств вычислительной техники;</li>
+<li><b>предоставление</b> — действия, направленные на раскрытие данных определённому лицу или кругу лиц;</li>
+<li><b>блокирование</b> — временное прекращение обработки, за исключением случаев, когда она необходима для уточнения данных;</li>
+<li><b>уничтожение</b> — действия, в результате которых невозможно восстановить содержание данных в информационной системе и (или) уничтожаются материальные носители;</li>
+<li><b>обезличивание</b> — действия, в результате которых невозможно определить принадлежность данных конкретному субъекту без дополнительной информации;</li>
+<li><b>информационная система персональных данных</b> — совокупность содержащихся в базах данных персональных данных и обеспечивающих их обработку информационных технологий и технических средств;</li>
+<li><b>пользователь</b> — любое лицо, посещающее Сайт и использующее его функции.</li></ul>
+
+<h3>3. Принципы обработки</h3>
+<p>3.1. Оператор придерживается принципов, установленных ст. 5 Закона о персональных данных:</p>
+<ul>
+<li>обработка осуществляется на законной и справедливой основе;</li>
+<li>обработка ограничивается достижением конкретных, заранее определённых и законных целей; не допускается обработка данных, несовместимая с целями их сбора;</li>
+<li>не допускается объединение баз данных, содержащих персональные данные, обработка которых осуществляется в несовместимых между собой целях;</li>
+<li>обработке подлежат только данные, которые отвечают целям обработки; содержание и объём данных не являются избыточными по отношению к заявленным целям;</li>
+<li>при обработке обеспечиваются точность данных, их достаточность и, при необходимости, актуальность; Оператор принимает необходимые меры по удалению или уточнению неполных или неточных данных;</li>
+<li>данные хранятся в форме, позволяющей определить субъекта, не дольше, чем этого требуют цели обработки, если срок хранения не установлен законом или договором;</li>
+<li>обрабатываемые данные уничтожаются либо обезличиваются по достижении целей обработки или в случае утраты необходимости в достижении этих целей, если иное не предусмотрено законом.</li></ul>
+
+<h3>4. Цели обработки персональных данных</h3>
+<p>4.1. Оператор обрабатывает данные в следующих целях:</p>
+<ul>
+<li><b>Предоставление доступа к материалам.</b> Открытие пользователю доступа к информационному материалу (гайду) после прохождения опроса и указания контактов; формирование краткого вывода на основании ответов.</li>
+<li><b>Обратная связь.</b> Связь с пользователем по телефону, в мессенджерах и с помощью SMS: уточнение ответов, выяснение, был ли материал полезен, консультация по вопросам привлечения клиентов.</li>
+<li><b>Информирование об услугах.</b> Направление информации об услугах Оператора (разработка сайтов, настройка и ведение рекламных кампаний, поисковое продвижение), в том числе рекламного характера, — при наличии согласия пользователя (ст. 15 Закона о персональных данных, ст. 18 Федерального закона «О рекламе»).</li>
+<li><b>Заключение и исполнение договоров.</b> Если пользователь принимает решение о заказе услуг — подготовка коммерческого предложения, заключение и исполнение договора, расчёты.</li>
+<li><b>Аналитика.</b> Оценка посещаемости Сайта, эффективности рекламных объявлений и конверсии, улучшение содержания опроса и материалов.</li>
+<li><b>Исполнение обязанностей.</b> Соблюдение требований законодательства, включая налоговое и бухгалтерское, рассмотрение обращений и претензий, защита прав и законных интересов Оператора.</li></ul>
+
+<h3>5. Категории субъектов и состав данных</h3>
+<p>5.1. Категория субъектов: пользователи Сайта — физические лица, в том числе представляющие организации и индивидуальных предпринимателей (владельцы и руководители клиник, администраторы, иные заинтересованные лица).</p>
+<p>5.2. Оператор обрабатывает следующие данные:</p>
+<ul>
+<li>имя, указанное пользователем;</li>
+<li>номер телефона;</li>
+<li>по желанию пользователя: название клиники или адрес сайта, город, роль в клинике (владелец, управляющий, администратор и др.);</li>
+<li>ответы на вопросы опроса: основной источник пациентов, число новых заявок на запись в месяц, наличие и результативность сайта, опыт работы с подрядчиками, основная проблема, число врачей;</li>
+<li>сведения о согласии: факт, дата и время его предоставления, редакция документа;</li>
+<li>технические данные: IP-адрес, идентификаторы cookie и локального хранилища, сведения о браузере, операционной системе, устройстве и разрешении экрана, адрес страницы-источника, рекламные метки (utm_*, yclid), дата, время и действия на Сайте;</li>
+<li>информация, которую пользователь сообщает Оператору при телефонном разговоре или переписке, если она относится к целям обработки.</li></ul>
+<p>5.3. Оператор не запрашивает и не обрабатывает специальные категории персональных данных (ст. 10 Закона о персональных данных: расовая и национальная принадлежность, политические взгляды, религиозные и философские убеждения, состояние здоровья, интимная жизнь), а также биометрические персональные данные (ст. 11). Пользователя просят не сообщать такие сведения. Ответы опроса касаются деятельности организации и не содержат сведений о здоровье пациентов.</p>
+<p>5.4. Оператор не осуществляет обработку данных лиц младше 18 лет. Сайт предназначен для предпринимателей и специалистов. Если Оператору станет известно, что данные получены от несовершеннолетнего без согласия законного представителя, они будут удалены.</p>
+
+<h3>6. Правовые основания обработки</h3>
+<p>6.1. Обработка осуществляется на основании: согласия субъекта на обработку его персональных данных (п. 1 ч. 1 ст. 6 Закона о персональных данных); договора, стороной которого является субъект, либо преддоговорных действий по его инициативе (п. 5 ч. 1 ст. 6); необходимости исполнения обязанностей, возложенных на Оператора законом (п. 2 ч. 1 ст. 6); необходимости осуществления прав и законных интересов Оператора при условии, что не нарушаются права субъекта (п. 7 ч. 1 ст. 6).</p>
+<p>6.2. Обработка персональных данных для продвижения услуг путём прямых контактов с помощью средств связи допускается только при наличии предварительного согласия субъекта (ч. 1 ст. 15 Закона о персональных данных). Оператор немедленно прекращает такую обработку по требованию субъекта.</p>
+<p>6.3. Согласие на рекламную информацию по сетям электросвязи (телефонные звонки, SMS, сообщения в мессенджерах) даётся отдельно и предварительно, как того требует ч. 1 ст. 18 Федерального закона «О рекламе». Абонент вправе в любой момент отказаться от получения такой информации.</p>
+
+<h3>7. Порядок и условия обработки</h3>
+<p>7.1. Оператор совершает следующие действия с данными: сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, передачу (предоставление, доступ), обезличивание, блокирование, удаление, уничтожение. Обработка осуществляется с использованием средств автоматизации и без них.</p>
+<p>7.2. Сбор данных производится непосредственно от пользователя через формы Сайта, а также автоматически с помощью cookie и сервисов веб-аналитики.</p>
+<p>7.3. В соответствии с ч. 5 ст. 18 Закона о персональных данных при сборе данных граждан Российской Федерации Оператор обеспечивает запись, систематизацию, накопление, хранение, уточнение (обновление, изменение) и извлечение таких данных с использованием баз данных, находящихся на территории Российской Федерации.</p>
+<p>7.4. Оператор вправе поручить обработку данных другому лицу с согласия субъекта, если иное не предусмотрено законом, на основании договора, содержащего перечень действий, цели обработки и обязанность соблюдать конфиденциальность и обеспечивать безопасность данных (ч. 3 ст. 6 Закона о персональных данных). Ответственность перед субъектом за действия такого лица несёт Оператор.</p>
+<p>7.5. Категории получателей, которым данные могут передаваться на основании поручения: организации, предоставляющие хостинг и доменные услуги; провайдеры CRM-систем и таблиц; операторы связи и сервисы телефонии, SMS и мессенджеров; сервисы веб-аналитики и рекламы (в том числе ООО «Яндекс» при использовании Яндекс Метрики и Яндекс Директа). Оператор не продаёт и не передаёт данные для использования в целях третьих лиц.</p>
+<p>7.6. Данные могут быть предоставлены государственным органам, органам дознания и следствия, судам и иным уполномоченным лицам по основаниям и в порядке, установленным законодательством Российской Федерации.</p>
+<p>7.7. Трансграничная передача персональных данных Оператором не осуществляется. Если она потребуется, Оператор до начала передачи направит уведомление в уполномоченный орган и обеспечит соблюдение требований ст. 12 Закона о персональных данных.</p>
+<p>7.8. Автоматизированное принятие решений, порождающих юридические последствия для субъекта или иным образом затрагивающих его права (ст. 16 Закона о персональных данных), Оператором не производится. Краткий вывод, формируемый по ответам опроса, носит справочный характер.</p>
+<p>7.9. Лица, допущенные к обработке, обязаны соблюдать конфиденциальность и не раскрывать данные третьим лицам без согласия субъекта, если иное не предусмотрено законом (ст. 7 Закона о персональных данных).</p>
+<p>7.10. Оператор уведомляет уполномоченный орган по защите прав субъектов персональных данных (Роскомнадзор) о намерении осуществлять обработку персональных данных в порядке, предусмотренном ст. 22 Закона о персональных данных.</p>
+
+<h3>8. Сроки обработки и хранения</h3>
+<p>8.1. Данные обрабатываются до достижения целей обработки, но не дольше трёх лет с момента последнего взаимодействия с пользователем, либо до отзыва согласия, в зависимости от того, что наступит раньше. Данные, необходимые для исполнения договора, налогового и бухгалтерского учёта, хранятся в сроки, установленные законодательством (в частности, Налоговым кодексом Российской Федерации и Федеральным законом от 06.12.2011 № 402-ФЗ «О бухгалтерском учёте»).</p>
+<p>8.2. Технические данные (cookie, идентификаторы) хранятся в сроки, указанные в Политике использования файлов cookie.</p>
+<p>8.3. По достижении целей обработки, истечении срока хранения или в случае отзыва согласия данные уничтожаются или обезличиваются в сроки, установленные ст. 21 Закона о персональных данных. Уничтожение подтверждается актом или записью в журнале учёта.</p>
+
+<h3>9. Права субъекта персональных данных</h3>
+<p>9.1. В соответствии со ст. 14 Закона о персональных данных субъект вправе получить информацию, касающуюся обработки его данных: подтверждение факта обработки; правовые основания и цели; способы обработки; сведения о лицах, имеющих доступ к данным или которым они могут быть раскрыты; перечень обрабатываемых данных и источник их получения; сроки обработки и хранения; порядок осуществления прав; сведения о трансграничной передаче; наименование лица, осуществляющего обработку по поручению; иные сведения, предусмотренные законом.</p>
+<p>9.2. Субъект вправе требовать от Оператора уточнения своих данных, их блокирования или уничтожения, если данные являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для заявленной цели, а также принимать предусмотренные законом меры по защите своих прав.</p>
+<p>9.3. Субъект вправе в любой момент отозвать согласие на обработку персональных данных (ч. 2 ст. 9), а также потребовать прекратить обработку в целях продвижения услуг (ч. 2 ст. 15).</p>
+<p>9.4. Субъект вправе обжаловать действия или бездействие Оператора в Роскомнадзор либо в судебном порядке, а также требовать возмещения убытков и (или) компенсации морального вреда (ст. 17 Закона о персональных данных, ст. 15, 151 и 152 Гражданского кодекса Российской Федерации).</p>
+<p>9.5. Для реализации прав субъект направляет запрос на {{EMAIL}} или по адресу: {{ADDRESS}}. Запрос должен содержать сведения, позволяющие идентифицировать субъекта (имя и номер телефона, указанные в форме), и описание требования. Запрос может быть подписан электронной подписью.</p>
+
+<h3>10. Обязанности Оператора при обращении субъекта</h3>
+<p>10.1. Оператор сообщает информацию, предусмотренную ст. 14 Закона о персональных данных, в течение 10 рабочих дней с момента получения запроса. Срок может быть продлён не более чем на пять рабочих дней при направлении субъекту мотивированного уведомления (ч. 3 ст. 14, ст. 20).</p>
+<p>10.2. Если субъект подтвердил, что данные неполны, неточны или неактуальны, Оператор вносит изменения в срок не более семи рабочих дней со дня представления подтверждающих сведений. Если данные незаконно получены или не необходимы для цели обработки — уничтожает их в тот же срок и уведомляет субъекта (ч. 3 ст. 20).</p>
+<p>10.3. При выявлении неправомерной обработки по обращению субъекта Оператор блокирует данные с момента обращения на период проверки; если неправомерность подтверждена, прекращает обработку в срок не более трёх рабочих дней, а если обеспечить правомерность невозможно — уничтожает данные в срок не более десяти рабочих дней (ст. 21).</p>
+<p>10.4. При отзыве согласия Оператор прекращает обработку и уничтожает данные в срок, не превышающий 30 дней с даты поступления отзыва, если иное не предусмотрено законом или договором (ч. 5 ст. 21).</p>
+<p>10.5. При установлении факта неправомерной или случайной передачи данных, повлекшей нарушение прав субъектов, Оператор уведомляет Роскомнадзор в течение 24 часов о произошедшем инциденте и предполагаемых причинах, а в течение 72 часов — о результатах внутреннего расследования (ч. 3.1 ст. 21).</p>
+
+<h3>11. Меры по обеспечению безопасности</h3>
+<p>11.1. Оператор принимает необходимые и достаточные правовые, организационные и технические меры для защиты данных от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, предоставления, распространения, а также от иных неправомерных действий (ст. 18.1 и 19 Закона о персональных данных).</p>
+<p>11.2. К таким мерам относятся: определение угроз безопасности; ограничение и разграничение доступа к данным; использование индивидуальных учётных записей и надёжных паролей; передача данных по защищённому протоколу HTTPS; использование средств защиты информации и антивирусного программного обеспечения; регулярное обновление программного обеспечения; резервное копирование; учёт носителей и событий доступа; обнаружение фактов несанкционированного доступа и принятие мер по их устранению; оценка эффективности принятых мер.</p>
+<p>11.3. Уровень защищённости определяется в соответствии с постановлением Правительства Российской Федерации от 01.11.2012 № 1119 и приказом ФСТЭК России от 18.02.2013 № 21.</p>
+<p>11.4. Оператор назначает лицо, ответственное за организацию обработки персональных данных (ст. 22.1 Закона о персональных данных). Контакты ответственного лица: {{EMAIL}}, {{PHONE}}.</p>
+
+<h3>12. Файлы cookie и аналитика</h3>
+<p>12.1. Сайт использует файлы cookie и сервисы веб-аналитики. Порядок их использования, сроки и способы отключения описаны в Политике использования файлов cookie, размещённой на Сайте.</p>
+<p>12.2. Оператор исходит из того, что идентификаторы cookie в сочетании с иными сведениями могут относиться к персональным данным, и обрабатывает их в соответствии с настоящей Политикой.</p>
+
+<h3>13. Ссылки на сторонние ресурсы</h3>
+<p>Сайт может содержать ссылки на сторонние ресурсы. Оператор не контролирует их содержание и не несёт ответственности за обработку данных на таких ресурсах. Перед передачей данных стороннему ресурсу рекомендуется ознакомиться с его политикой конфиденциальности.</p>
+
+<h3>14. Ответственность</h3>
+<p>Лица, виновные в нарушении требований законодательства о персональных данных, несут материальную, дисциплинарную, административную, гражданско-правовую и уголовную ответственность в соответствии с законодательством Российской Федерации (ст. 24 Закона о персональных данных). Моральный вред, причинённый субъекту вследствие нарушения его прав, подлежит возмещению в соответствии с законодательством.</p>
+
+<h3>15. Заключительные положения</h3>
+<p>15.1. Оператор вправе вносить изменения в Политику. Новая редакция вступает в силу с момента публикации на Сайте, если иное не предусмотрено новой редакцией. Действующая редакция всегда доступна по ссылке «Политика конфиденциальности» в нижней части Сайта.</p>
+<p>15.2. Все вопросы, связанные с обработкой данных, можно направить на {{EMAIL}}. Претензии рассматриваются в течение 30 календарных дней с момента получения.</p>
+<p>15.3. К отношениям между Оператором и субъектом применяется право Российской Федерации.</p>`},
+
+consent:{t:'Согласие на обработку данных', html:`
+<h2>Согласие на обработку персональных данных</h2>
+<p class="d">Редакция от {{DOCS_DATE}}. Оформлено отдельным документом в соответствии с ч. 1 ст. 9 Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+
+<h3>1. Оператор</h3>
+<p>{{OPERATOR_FULL}}, ИНН {{INN}}, ОГРНИП {{OGRNIP}}, адрес: {{ADDRESS}}, e-mail: {{EMAIL}}, телефон: {{PHONE}} (далее — Оператор).</p>
+
+<h3>2. Субъект персональных данных</h3>
+<p>Физическое лицо, заполняющее форму на сайте {{SITE}} (далее — Сайт) и указывающее в ней имя и номер телефона. Субъект идентифицируется по имени и номеру телефона, указанным в форме. Отметка в форме означает, что субъект действует свободно, своей волей и в своём интересе, является совершеннолетним и дееспособным, а указанный номер телефона принадлежит ему и используется им.</p>
+
+<h3>3. Заявление о согласии</h3>
+<p>Проставляя отметку в поле «Даю согласие на обработку персональных данных» и нажимая кнопку отправки формы, я даю Оператору конкретное, предметное, информированное, сознательное и однозначное согласие на обработку моих персональных данных на условиях, изложенных ниже (п. 1 ст. 9 Закона о персональных данных).</p>
+
+<h3>4. Перечень персональных данных</h3>
+<ul>
+<li>имя;</li>
+<li>номер телефона;</li>
+<li>по желанию: название клиники или адрес сайта, город, роль в клинике;</li>
+<li>ответы на вопросы опроса: источник пациентов, число новых заявок на запись, наличие и результативность сайта, опыт работы с подрядчиками, основная проблема, число врачей;</li>
+<li>технические данные: IP-адрес, идентификаторы cookie, сведения о браузере, устройстве и операционной системе, адрес страницы-источника, рекламные метки, дата и время посещения и действия на Сайте;</li>
+<li>сведения, сообщённые мной Оператору в телефонном разговоре или переписке.</li></ul>
+<p>Специальные категории персональных данных и биометрические данные я Оператору не передаю и передавать не буду.</p>
+
+<h3>5. Цели обработки</h3>
+<ul>
+<li>предоставление мне доступа к гайду и формирование вывода на основании моих ответов;</li>
+<li>связь со мной для обратной связи по материалу, уточнения ответов и консультации;</li>
+<li>информирование меня об услугах Оператора (разработка сайтов, настройка рекламы, поисковое продвижение), в том числе рекламного характера;</li>
+<li>подготовка коммерческого предложения и, по моему желанию, заключение и исполнение договора;</li>
+<li>анализ работы Сайта и рекламы, улучшение материалов;</li>
+<li>исполнение требований законодательства Российской Федерации.</li></ul>
+
+<h3>6. Действия с данными и способы обработки</h3>
+<p>Сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (предоставление, доступ), обезличивание, блокирование, удаление, уничтожение. Обработка осуществляется с использованием средств автоматизации и без них, в том числе с использованием баз данных, находящихся на территории Российской Федерации (ч. 5 ст. 18 Закона о персональных данных).</p>
+
+<h3>7. Лица, которым могут передаваться данные</h3>
+<p>Я согласен(на), что Оператор вправе поручить обработку данных и передавать их для достижения указанных целей лицам, привлекаемым на основании договора с обязательством соблюдать конфиденциальность и безопасность данных (ч. 3 ст. 6 Закона): хостинг-провайдерам; поставщикам CRM-систем и облачных таблиц; операторам связи, телефонии, SMS и мессенджеров; поставщикам сервисов аналитики и рекламы, включая ООО «Яндекс» (Яндекс Метрика, Яндекс Директ). Иным лицам данные передаются только в случаях, предусмотренных законом.</p>
+
+<h3>8. Согласие на получение информации по сетям электросвязи</h3>
+<p>Я даю предварительное согласие на получение от Оператора информации, в том числе рекламного характера, посредством телефонных звонков, SMS-сообщений и сообщений в мессенджерах на указанный мной номер телефона (ч. 1 ст. 18 Федерального закона от 13.03.2006 № 38-ФЗ «О рекламе», ст. 15 Закона о персональных данных). Я вправе в любой момент отказаться от получения такой информации, сообщив об этом Оператору любым удобным способом.</p>
+
+<h3>9. Срок действия согласия</h3>
+<p>Согласие действует с момента отправки формы до момента его отзыва, но не более трёх лет с даты последнего взаимодействия с Оператором. Если после отзыва Оператор обязан хранить отдельные данные в силу закона или договора, они хранятся только в объёме и в сроки, установленные соответствующими нормами.</p>
+
+<h3>10. Порядок отзыва</h3>
+<p>10.1. Я вправе в любой момент отозвать согласие, направив заявление в свободной форме на {{EMAIL}} либо по адресу: {{ADDRESS}}. В заявлении необходимо указать имя и номер телефона, указанные в форме, и заявить об отзыве.</p>
+<p>10.2. Оператор прекращает обработку и уничтожает данные в течение 30 дней со дня получения отзыва, если иное не предусмотрено законом или договором, стороной которого я являюсь (ч. 5 ст. 21 Закона).</p>
+<p>10.3. Отзыв согласия не влияет на законность обработки, осуществлённой до его получения.</p>
+
+<h3>11. Права субъекта</h3>
+<p>Мне разъяснены мои права, предусмотренные ст. 14–17 Закона о персональных данных: право на получение информации об обработке; право требовать уточнения, блокирования и уничтожения данных; право на отзыв согласия; право обжаловать действия Оператора в Роскомнадзор или в суде. Мне известно, что предоставление данных является добровольным, а отказ от их предоставления означает невозможность получить гайд.</p>
+
+<h3>12. Дополнительные условия</h3>
+<p>12.1. Я ознакомлен(а) с Политикой в отношении обработки персональных данных, размещённой на Сайте.</p>
+<p>12.2. Факт предоставления согласия фиксируется Оператором (дата, время, редакция документа, идентификатор сессии) и хранится в течение срока действия согласия. Согласие, данное в электронной форме путём проставления отметки и отправки формы, имеет силу согласия в любой позволяющей подтвердить факт его получения форме (ч. 1 ст. 9 Закона).</p>
+<p>12.3. Согласие не может быть проставлено по умолчанию; я проставляю отметку самостоятельно.</p>`},
+
+cookies:{t:'Политика cookie', html:`
+<h2>Политика использования файлов cookie</h2>
+<p class="d">Редакция от {{DOCS_DATE}}. Действует на сайте {{SITE}}.</p>
+
+<h3>1. Общие положения</h3>
+<p>1.1. Настоящая Политика описывает, какие файлы cookie и аналогичные технологии использует сайт {{SITE}} (далее — Сайт), для чего и как ими управлять. Оператор — {{OPERATOR_FULL}}, ИНН {{INN}}, ОГРНИП {{OGRNIP}}, e-mail: {{EMAIL}}.</p>
+<p>1.2. Политика разработана в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и Федеральным законом от 27.07.2006 № 149-ФЗ «Об информации, информационных технологиях и о защите информации» и является дополнением к Политике в отношении обработки персональных данных.</p>
+<p>1.3. Cookie — небольшие текстовые файлы, которые сохраняются в браузере пользователя при посещении сайта. Аналогичные технологии включают локальное хранилище браузера (localStorage, sessionStorage), пиксели и метки в адресе страницы (utm_*, yclid).</p>
+
+<h3>2. Правовой статус</h3>
+<p>2.1. Сами по себе cookie не всегда позволяют установить личность пользователя. Однако в сочетании с IP-адресом, сведениями об устройстве, именем и номером телефона, указанными в форме, они могут относиться к персональным данным. Поэтому Оператор обрабатывает такие данные в соответствии с законодательством о персональных данных.</p>
+<p>2.2. Cookie, необходимые для работы Сайта, обрабатываются на основании законного интереса Оператора в обеспечении функционирования Сайта. Аналитические и рекламные cookie используются при наличии согласия пользователя, которое выражается в продолжении использования Сайта после ознакомления с настоящей Политикой либо в настройках браузера.</p>
+
+<h3>3. Какие cookie мы используем</h3>
+<ul>
+<li><b>Необходимые.</b> Идентификатор сессии, прогресс прохождения опроса, сохранение имени и телефона для повторного визита. Без них Сайт не сможет корректно работать. Хранятся в браузере до удаления или в течение сессии.</li>
+<li><b>Аналитические.</b> Сервис Яндекс Метрика собирает данные о посещаемости, источниках переходов, глубине просмотра, устройствах, а также, при включении, записывает действия на странице (вебвизор, карты кликов и скроллинга). Данные используются в обобщённом виде для улучшения Сайта. Сроки хранения определяются политикой сервиса, как правило до 12 месяцев.</li>
+<li><b>Рекламные.</b> Метки в адресе страницы и идентификаторы Яндекс Директа позволяют определить, с какого объявления перешёл пользователь, и оценить стоимость и результативность рекламы. Оператор не использует их для сопоставления с профилями в других источниках.</li></ul>
+
+<h3>4. Передача данных сервисам аналитики</h3>
+<p>4.1. Данные, собранные с помощью cookie, могут передаваться поставщикам сервисов аналитики и рекламы на основании их пользовательских соглашений и политик конфиденциальности. Для Яндекс Метрики применяются условия использования сервиса и политика конфиденциальности ООО «Яндекс».</p>
+<p>4.2. Оператор не продаёт данные, собранные с помощью cookie, и не использует их для принятия решений, порождающих юридические последствия для пользователя.</p>
+
+<h3>5. Сроки хранения</h3>
+<p>Сессионные cookie удаляются при закрытии браузера. Постоянные cookie и записи локального хранилища сохраняются до момента их удаления пользователем, но не дольше 12 месяцев с момента установки, если иное не указано поставщиком соответствующего сервиса. Сведения об уровне активности, не позволяющие идентифицировать пользователя, могут храниться в обезличенном виде.</p>
+
+<h3>6. Как управлять и отключить cookie</h3>
+<p>6.1. Пользователь может запретить сохранение cookie, удалить уже сохранённые файлы или настроить уведомления о них в настройках браузера (Яндекс Браузер, Chrome, Safari, Firefox, Edge и др.).</p>
+<p>6.2. Для отказа от сбора статистики Яндекс Метрикой можно воспользоваться специальным дополнением для браузера, предоставляемым Яндексом, либо включить в браузере запрет на отслеживание.</p>
+<p>6.3. Отключение необходимых cookie может привести к тому, что опрос не будет сохранять прогресс, а форма — работать корректно. Отключение аналитических cookie на функциональность Сайта не влияет.</p>
+
+<h3>7. Согласие и отказ</h3>
+<p>7.1. Продолжая использовать Сайт, пользователь выражает согласие на использование cookie на условиях настоящей Политики.</p>
+<p>7.2. Пользователь, не согласный с использованием cookie, должен отключить их в настройках браузера или прекратить использование Сайта.</p>
+<p>7.3. Согласие на обработку имени и номера телефона даётся отдельно через форму на Сайте и не может быть заменено согласием на использование cookie.</p>
+
+<h3>8. Изменения и контакты</h3>
+<p>Оператор вправе изменять Политику. Новая редакция вступает в силу с момента публикации на Сайте. По вопросам, связанным с использованием cookie, можно обратиться на {{EMAIL}}.</p>`},
+
+terms:{t:'Пользовательское соглашение', html:`
+<h2>Пользовательское соглашение</h2>
+<p class="d">Редакция от {{DOCS_DATE}}. Действует на сайте {{SITE}}.</p>
+
+<h3>1. Общие положения</h3>
+<p>1.1. Настоящее Пользовательское соглашение (далее — Соглашение) регулирует отношения между {{OPERATOR_FULL}}, ИНН {{INN}}, ОГРНИП {{OGRNIP}}, адрес: {{ADDRESS}}, e-mail: {{EMAIL}}, телефон: {{PHONE}} (далее — Оператор), и любым физическим лицом (далее — Пользователь), использующим сайт {{SITE}} (далее — Сайт).</p>
+<p>1.2. Соглашение является юридически значимым и в соответствии со ст. 435 и 438 Гражданского кодекса Российской Федерации (далее — ГК РФ) считается принятым Пользователем с момента начала использования Сайта. Использование Сайта означает полное и безоговорочное согласие с условиями Соглашения. Если Пользователь не согласен с условиями, он должен прекратить использование Сайта.</p>
+<p>1.3. Сайт не является публичной офертой (ст. 437 ГК РФ). Информация на Сайте носит справочный и информационный характер и не является предложением заключить договор об оказании услуг.</p>
+<p>1.4. Неотъемлемой частью Соглашения являются Политика в отношении обработки персональных данных, Согласие на обработку персональных данных и Политика использования файлов cookie, размещённые на Сайте.</p>
+
+<h3>2. Термины</h3>
+<p><b>Сайт</b> — совокупность информации и программ, доступных по адресу {{SITE}}. <b>Опрос</b> — интерактивная форма из вопросов о деятельности организации Пользователя. <b>Гайд</b> — информационный материал в форме истории и рекомендаций, доступ к которому предоставляется после прохождения опроса. <b>Контент</b> — все тексты, изображения, оформление, программный код и иные материалы Сайта и гайда.</p>
+
+<h3>3. Предмет</h3>
+<p>3.1. Оператор безвозмездно предоставляет Пользователю доступ к Сайту, возможность пройти опрос и получить гайд для чтения на Сайте либо в виде файла в формате PDF при условии указания имени, номера телефона и предоставления согласия на обработку персональных данных.</p>
+<p>3.2. Предоставление доступа к гайду не является оказанием услуг по договору возмездного оказания услуг и не влечёт обязанности Пользователя оплачивать что-либо Оператору.</p>
+<p>3.3. Оператор может связаться с Пользователем по указанным контактам, чтобы узнать о пользе материала, ответить на вопросы и предложить свои услуги. Решение об их приобретении Пользователь принимает самостоятельно. Договор на платные услуги заключается только отдельно, в письменной форме либо путём акцепта коммерческого предложения (ст. 434, 438 ГК РФ).</p>
+
+<h3>4. Права и обязанности Пользователя</h3>
+<p>4.1. Пользователь вправе бесплатно пользоваться Сайтом, получать гайд, запрашивать у Оператора информацию об обработке своих данных и отзывать согласие на их обработку.</p>
+<p>4.2. Пользователь обязуется: быть совершеннолетним и дееспособным; указывать достоверные сведения и только принадлежащий ему номер телефона; не вводить данные третьих лиц без их согласия; не использовать Сайт в противоправных целях; не предпринимать действий, нарушающих работу Сайта (автоматизированный сбор данных, массовое заполнение форм, попытки взлома, внедрение вредоносного кода); не нарушать права третьих лиц и законодательство Российской Федерации.</p>
+<p>4.3. Пользователь несёт ответственность за достоверность указанных данных. Оператор вправе не предоставлять доступ к материалам, если данные явно недостоверны.</p>
+
+<h3>5. Права и обязанности Оператора</h3>
+<p>5.1. Оператор обязуется предоставлять доступ к Сайту и гайду в соответствии с Соглашением, обрабатывать персональные данные в соответствии с законодательством и Политикой, не передавать данные третьим лицам, кроме случаев, предусмотренных законом и согласием Пользователя.</p>
+<p>5.2. Оператор вправе: изменять содержание, структуру и дизайн Сайта и гайда, вопросы опроса; приостанавливать или прекращать работу Сайта полностью или частично, в том числе для технического обслуживания; ограничивать доступ Пользователю при нарушении Соглашения; связываться с Пользователем в порядке, предусмотренном согласием; использовать обобщённые и обезличенные результаты опросов в статистических и аналитических целях.</p>
+
+<h3>6. Интеллектуальная собственность</h3>
+<p>6.1. Контент Сайта и гайда, включая тексты, истории, структуру, оформление, иллюстрации и программный код, является объектом авторских прав (ст. 1259 ГК РФ), принадлежит Оператору или используется им на законных основаниях. Исключительное право на произведения принадлежит его правообладателю (ст. 1229, 1270 ГК РФ).</p>
+<p>6.2. Пользователю предоставляется неисключительное, безвозмездное, непередаваемое право использовать гайд в личных информационных целях, в том числе применять содержащиеся в нём идеи в собственной деятельности (ст. 1273 ГК РФ). Идеи, методы и подходы, изложенные в гайде, не охраняются авторским правом, охраняется форма их изложения.</p>
+<p>6.3. Без письменного разрешения Оператора запрещено: копировать, воспроизводить, перерабатывать, распространять, публиковать, продавать или иным способом использовать гайд и иной контент в коммерческих целях; удалять или изменять указания на правообладателя; использовать оформление Сайта в целях введения в заблуждение.</p>
+<p>6.4. Нарушение исключительных прав влечёт ответственность, установленную ст. 1250–1253 и 1301 ГК РФ, включая компенсацию в размере от 10 000 до 5 000 000 рублей либо двукратной стоимости контрафактных экземпляров, а также административную и уголовную ответственность в случаях, предусмотренных законом.</p>
+
+<h3>7. Характер информации и ограничение ответственности</h3>
+<p>7.1. Гайд и иные материалы Сайта носят информационный характер. Они не являются индивидуальной консультацией, юридической, финансовой, налоговой или медицинской рекомендацией, аудитом, гарантией или обещанием результата.</p>
+<p>7.2. Оператор не гарантирует, что применение рекомендаций приведёт к росту числа обращений, пациентов, выручки или иным результатам. Результат зависит от множества факторов, находящихся вне контроля Оператора: рынка, конкуренции, региона, цен, качества сервиса, квалификации персонала, сезонности и других.</p>
+<p>7.3. Истории и примеры в гайде могут быть собирательными и иллюстративными. Имена, названия, цифры и обстоятельства могут быть изменены. Сходство с реальными лицами и организациями случайно, если прямо не указано иное. Пользователь понимает, что описанные результаты не являются обещанием аналогичных показателей.</p>
+<p>7.4. Итоговый вывод на экране после опроса формируется на основании ответов Пользователя по заранее определённым правилам и не является профессиональной оценкой деятельности организации.</p>
+<p>7.5. Сайт предоставляется «как есть» (as is). Оператор не гарантирует бесперебойную и безошибочную работу, отсутствие вредоносных компонентов в сетях третьих лиц, а также совместимость Сайта со всеми устройствами и браузерами.</p>
+<p>7.6. Оператор не отвечает за: перебои и сбои, вызванные действиями провайдеров связи, хостинга и иных третьих лиц; последствия использования гайда Пользователем; косвенные убытки и упущенную выгоду, за исключением случаев, когда ограничение ответственности запрещено законом. Ограничения, установленные настоящим разделом, не исключают ответственность, которую по закону нельзя исключить или ограничить.</p>
+<p>7.7. Оператор не проверяет достоверность данных, вводимых Пользователем, и не несёт ответственности за последствия ввода недостоверных данных или данных третьих лиц.</p>
+
+<h3>8. Обработка персональных данных</h3>
+<p>8.1. Обработка персональных данных осуществляется в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных», Политикой в отношении обработки персональных данных и Согласием на обработку персональных данных.</p>
+<p>8.2. Направление рекламной информации по сетям электросвязи осуществляется только при наличии предварительного согласия Пользователя (ч. 1 ст. 18 Федерального закона «О рекламе»). Пользователь вправе отказаться от получения такой информации в любой момент.</p>
+
+<h3>9. Ссылки и сторонние ресурсы</h3>
+<p>Сайт может содержать ссылки на сторонние ресурсы, в том числе встроенные сервисы аналитики и просмотра документов. Оператор не контролирует такие ресурсы и не отвечает за их содержание, доступность и политику конфиденциальности.</p>
+
+<h3>10. Обстоятельства непреодолимой силы</h3>
+<p>Оператор освобождается от ответственности за неисполнение или ненадлежащее исполнение обязательств, если оно вызвано обстоятельствами непреодолимой силы (ст. 401 ГК РФ), включая стихийные бедствия, отключения электроэнергии и связи, массовые сбои сетей, действия органов власти, атаки на инфраструктуру.</p>
+
+<h3>11. Порядок разрешения споров</h3>
+<p>11.1. Отношения сторон регулируются законодательством Российской Федерации.</p>
+<p>11.2. Все споры стороны стремятся решить путём переговоров. Претензия направляется в письменной форме на {{EMAIL}} либо по адресу: {{ADDRESS}}. Срок рассмотрения претензии — 30 календарных дней с момента получения.</p>
+<p>11.3. При недостижении согласия спор передаётся на рассмотрение суда в соответствии с правилами подсудности, установленными законодательством Российской Федерации. Если Пользователь является потребителем, за ним сохраняются права, предусмотренные Законом Российской Федерации от 07.02.1992 № 2300-1 «О защите прав потребителей», включая право выбора подсудности по ч. 7 ст. 29 Гражданского процессуального кодекса Российской Федерации.</p>
+
+<h3>12. Изменение и прекращение Соглашения</h3>
+<p>12.1. Оператор вправе в одностороннем порядке изменять Соглашение. Новая редакция вступает в силу с момента публикации на Сайте, если иное не указано в ней. Продолжение использования Сайта после публикации означает согласие с изменениями.</p>
+<p>12.2. Пользователь вправе в любой момент прекратить использование Сайта. Оператор вправе прекратить доступ Пользователю при нарушении Соглашения.</p>
+<p>12.3. Признание отдельного положения недействительным не влечёт недействительность остальных положений.</p>
+
+<h3>13. Реквизиты и связь</h3>
+<p>{{OPERATOR_FULL}}<br>ИНН: {{INN}}<br>ОГРНИП: {{OGRNIP}}<br>Адрес: {{ADDRESS}}<br>E-mail: {{EMAIL}}<br>Телефон: {{PHONE}}</p>`}
+};
+const QUESTIONS = [
+  {t:"Как сейчас приходят пациенты в вашу клинику?", h:"Даже по рекомендации многие сначала смотрят клинику в интернете. Выберите основной источник", o:[
+    "Сарафанное радио, пациенты приходят по рекомендации","Яндекс Директ, реклама в поиске","Яндекс Карты и 2ГИС, карточка клиники","Поиск Яндекса: сайт в выдаче без рекламы (SEO)","ВКонтакте и другие соцсети","Всё понемногу, единой системы нет","Свой вариант"], c:1},
+  {t:"Сколько новых заявок на запись получает клиника в среднем за месяц?", h:"Считаем все новые обращения: звонки, сообщения и заявки с сайта, карт и рекламы", o:[
+    "До 30",
+    "30–70",
+    "70–120",
+    "120–200",
+    "200–350",
+    "Более 350"]},
+  {t:"Есть ли у клиники сайт?", h:"Сайт — первое, что видит пациент перед записью. Приносит ли он заявки?", o:[
+    "Нет сайта вообще","Есть, но заявок почти нет","Есть, изредка приходят обращения","Есть и работает, результатом доволен"]},
+  {t:"Был ли опыт работы с подрядчиками по сайту и рекламе?", h:"Агентства, фрилансеры, маркетологи. Это поможет подобрать шаги без лишних рисков", o:[
+    "Нет, к подрядчикам не обращались","Да, остались довольны результатом","Да, но заметного результата не было","Да, опыт был неудачным: сорвали сроки, пропали или деньги ушли впустую"]},
+  {t:"Какая главная проблема с пациентами сейчас?", h:"Выберите то, что беспокоит больше всего", o:[
+    "Мало новых пациентов, кресла простаивают","Пациенты есть, но не возвращаются повторно","Рядом много конкурентов, теряемся на фоне","Не понимаю, как выстроить стабильный поток","Свой вариант"], c:1},
+  {t:"Сколько врачей работает в клинике?", h:"Последний вопрос. От размера команды зависит, какой поток заявок клиника сможет принять", o:[
+    "1–2 врача","3–5 врачей","6–10 врачей","Более 10, крупная клиника"]}
+];
+const N = QUESTIONS.length, TOTAL = N + 1;
+const answers = {}; let cur = 0, busy = false;
+const sid = (()=>{ try{ let v=localStorage.getItem('quiz_sid'); if(!v){v=Date.now().toString(36)+Math.random().toString(36).slice(2,8); localStorage.setItem('quiz_sid',v);} return v; }catch(_){ return 'x'+Date.now(); } })();
+const utm = Object.fromEntries([...new URLSearchParams(location.search)].filter(([k])=>/^(utm_|yclid|_openstat)/.test(k)));
+// Сохранение: после каждого ответа (status=partial) и при отправке контактов (status=lead).
+// Так вы видите ответы даже тех, кто дошёл до контактов и ушёл.
+function save(status){
+  const payload = {sid, status, ...answers, utm, page:location.href, updated:new Date().toISOString()};
+  try{ localStorage.setItem('quiz_lead', JSON.stringify(payload)); }catch(_){}
+  console.log('quiz', status, payload);
+  if(!CONFIG.ENDPOINT) return;
+  const body = JSON.stringify(payload);
+  try{
+    if(status==='lead') fetch(CONFIG.ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain'},body,keepalive:true}).catch(()=>{});
+    else if(navigator.sendBeacon) navigator.sendBeacon(CONFIG.ENDPOINT, new Blob([body],{type:'text/plain'}));
+    else fetch(CONFIG.ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain'},body,keepalive:true}).catch(()=>{});
+  }catch(_){}
+}
+
+const $ = id => document.getElementById(id);
+// Яндекс Метрика: грузится только если указан CONFIG.METRIKA_ID
+if(CONFIG.METRIKA_ID){
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+  ym(CONFIG.METRIKA_ID,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+}
+// Цели: quiz_start, quiz_q1..q6, quiz_contacts, lead, guide_read, guide_download
+function goal(n){ try{ if(CONFIG.METRIKA_ID && window.ym) ym(CONFIG.METRIKA_ID,'reachGoal',n); }catch(_){} }
+let done=false, sent=false, unlockAt=0;
+const stage = $('stage');
+
+const ICON_INFO = '<svg viewBox="0 0 24 24" fill="none" stroke="#2b7fd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>';
+
+// build steps
+QUESTIONS.forEach((q,i)=>{
+  const d = document.createElement('div'); d.className='step'; d.id='s'+i;
+  d.innerHTML = `<h1>${q.t}</h1><p class="hint">${q.h}</p><div class="opts">${
+    q.o.map((x,j)=>`<button class="opt" data-i="${i}" data-j="${j}"><span class="k"></span><span class="t">${x}</span></button>`).join('')
+  }</div>${q.c?`<div class="cust"><input type="text" maxlength="200" placeholder="Напишите свой вариант" aria-label="Свой вариант" autocomplete="off"><button class="btn" data-cust="${i}" disabled>Продолжить</button></div>`:''}<button class="back" data-back>← Назад</button>`;
+  stage.appendChild(d);
+});
+
+// intro
+const it = document.createElement('div'); it.className='step'; it.id='sI';
+it.innerHTML = `<div class="eyebrow">Бесплатно · 1 минута · PDF-история в подарок</div>
+<h1 class="hero">Пройдите опрос и получите историю, как клиника выбралась из кризиса. Примените её опыт у себя и заберите рабочие фишки</h1>
+<p class="lead">Ответьте на 6 вопросов и сразу получите PDF-историю: в ней рассказано, как клиника с оттоком пациентов нашла причины и снова заполнила запись. Её шаги можно повторить у себя.</p>
+<ul class="rows">
+<li><div><b>1. Отвечаете на 6 вопросов</b><span>Около минуты, без сложных цифр</span></div></li>
+<li><div><b>2. Получаете PDF-историю клиники</b><span>Реальный путь клиники: где терялись пациенты и что это изменило</span></div></li>
+<li><div><b>3. Понимаете, с чего начать</b><span>Какие шаги из истории подойдут именно вам</span></div></li>
+</ul>
+<button class="btn" id="start">Получить историю</button>`;
+stage.appendChild(it);
+
+// contacts
+const c = document.createElement('div'); c.className='step'; c.id='s'+N;
+c.innerHTML = `<h1>Оставьте контакты, чтобы открыть историю</h1>
+<p class="hint">История откроется сразу после отправки. Позже мы позвоним и узнаем, получилось ли применить советы. Название клиники и роль помогут нам подготовиться к разговору.</p>
+<div class="f"><label for="name">Как вас зовут</label><input id="name" type="text" placeholder="Александр" autocomplete="given-name"></div>
+<div class="f"><label for="phone">Номер телефона</label><input id="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel"></div>
+<div class="f"><label for="clinic">Клиника или сайт <em>· необязательно</em></label><input id="clinic" type="text" maxlength="120" placeholder="Название клиники или адрес сайта" autocomplete="organization"></div>
+<div class="f"><label for="city">Город <em>· необязательно</em></label><input id="city" type="text" maxlength="60" placeholder="Например, Екатеринбург" autocomplete="address-level2"></div>
+<div class="f"><label id="roleL">Ваша роль <em>· необязательно</em></label><div class="roles" role="group" aria-labelledby="roleL"><button type="button" class="role" data-role="Владелец">Владелец</button><button type="button" class="role" data-role="Управляющий">Управляющий</button><button type="button" class="role" data-role="Администратор">Администратор</button><button type="button" class="role" data-role="Другое">Другое</button></div></div>
+<label class="chk"><input type="checkbox" id="agree"><span>Даю <a data-doc="consent">согласие на обработку персональных данных</a> и принимаю <a data-doc="privacy">политику конфиденциальности</a></span></label>
+<button class="btn" id="send" disabled>Открыть историю</button>
+<button class="back" data-back>← Назад</button>`;
+stage.appendChild(c);
+
+// final
+const f = document.createElement('div'); f.className='step center'; f.id='sF';
+f.innerHTML = `<div class="done-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c4beff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+<h1>История открыта</h1>
+<div class="sum" id="sum"></div>
+<button class="btn" id="open">Читать историю на сайте</button>
+<button class="btn alt" id="dl" type="button"><span id="dlTxt">Скачать PDF</span></button>
+<p class="fine">Позже мы позвоним и спросим, что оказалось полезным.<br>Разговор займёт 10–15 минут и ни к чему не обязывает.</p>`;
+stage.appendChild(f);
+
+function show(id){
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+  $(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function progress(i){
+  const pct = Math.round(8 + (i/N)*92);
+  $('fill').style.width = pct+'%';
+  if(i<N){
+    $('metaL').textContent = 'Вопрос '+(i+1)+' из '+N;
+    $('metaR').textContent = i===N-1 ? 'Остался последний' : (n=>'Осталось '+n+(n<5?' шага':' шагов'))(TOTAL-i-1);
+  } else {
+    $('metaL').textContent = 'Контакты';
+    $('metaR').textContent = 'Последний шаг';
+    $('rewardTxt').textContent = 'Гайд почти открыт';
+  }
+}
+function go(i,fromPop){
+  cur=i; stage.classList.toggle('tall', i>=0);
+  if(!fromPop && i>=0) history.pushState({s:i},'');
+  if(i<0){ $('head').style.display='none'; show('sI'); return; }
+  $('head').style.display=''; progress(i); show('s'+i);
+  if(i<N && !answers['q'+(i+1)]){
+    const box=$('s'+i).querySelector('.opts'), cu=$('s'+i).querySelector('.cust .btn');
+    unlockAt=Date.now()+CONFIG.STEP_DELAY; box.classList.add('lock');
+    setTimeout(()=>box.classList.remove('lock'),CONFIG.STEP_DELAY);
+  } else unlockAt=0;
+  if(i===N) goal('quiz_contacts');
+  if(i===N) setTimeout(()=>$('name').focus({preventScroll:true}),350);
+}
+
+function commit(i,j,text,custom){
+  busy=true;
+  answers['q'+(i+1)] = {question:QUESTIONS[i].t, answer:text, idx:j, ...(custom?{custom:true}:{})};
+  save('partial'); goal('quiz_q'+(i+1));
+  setTimeout(()=>{busy=false; go(i+1)},280);
+}
+function pick(i,j){
+  if(busy || Date.now()<unlockAt) return;
+  const q=QUESTIONS[i], btns=document.querySelectorAll('#s'+i+' .opt'), cu=document.querySelector('#s'+i+' .cust');
+  btns.forEach(b=>b.classList.remove('sel'));
+  btns[j].classList.add('sel');
+  if(q.c && j===q.o.length-1){
+    cu.classList.add('on');
+    setTimeout(()=>cu.querySelector('input').focus(),50);
+    return;
+  }
+  if(cu) cu.classList.remove('on');
+  commit(i,j,q.o[j],false);
+}
+function pickCustom(i){
+  if(busy || Date.now()<unlockAt) return;
+  const v=document.querySelector('#s'+i+' .cust input').value.trim();
+  if(v.length<2) return;
+  commit(i,QUESTIONS[i].o.length-1,v,true);
+}
+
+let roleVal='';
+stage.addEventListener('click',e=>{
+  const rl=e.target.closest('.role');
+  if(rl){ const on=rl.classList.contains('sel'); document.querySelectorAll('.role').forEach(x=>x.classList.remove('sel')); roleVal=on?'':rl.dataset.role; if(!on) rl.classList.add('sel'); return; }
+  const o = e.target.closest('.opt'); if(o) return pick(+o.dataset.i,+o.dataset.j);
+  const cb=e.target.closest('[data-cust]'); if(cb) return pickCustom(+cb.dataset.cust);
+  if(e.target.closest('[data-back]')){ if(history.state && history.state.s===cur) history.back(); else go(cur-1,true); }
+});
+stage.addEventListener('input',e=>{ const c=e.target.closest('.cust'); if(c) c.querySelector('.btn').disabled = e.target.value.trim().length<2; });
+stage.addEventListener('keydown',e=>{ const c=e.target.closest('.cust'); if(c && e.key==='Enter'){ e.preventDefault(); pickCustom(cur); } });
+document.addEventListener('keydown',e=>{
+  if(e.target.matches && e.target.matches('input,textarea')) return;
+  if(cur>=0 && cur<N && e.key>='1' && e.key<='9' && +e.key<=QUESTIONS[cur].o.length && $('s'+cur).classList.contains('active')) pick(cur,+e.key-1);
+});
+
+// phone mask (RU)
+const phone=$('phone'), nameI=$('name');
+phone.addEventListener('input',()=>{
+  let d = phone.value.replace(/\D/g,'');
+  if(d[0]==='8'||d[0]==='7') d=d.slice(1);
+  d=d.slice(0,10);
+  let s = d.length? '+7 ('+d.slice(0,3) : '';
+  if(d.length>=3) s+=') '+d.slice(3,6);
+  if(d.length>=6) s+='-'+d.slice(6,8);
+  if(d.length>=8) s+='-'+d.slice(8,10);
+  phone.value=s; phone.classList.remove('err'); check();
+});
+phone.addEventListener('focus',()=>{ if(!phone.value) phone.value='+7 ('; });
+phone.addEventListener('blur',()=>{ if(phone.value==='+7 (') phone.value=''; phone.classList.toggle('err', phone.value!=='' && phone.value.replace(/\D/g,'').length!==11); });
+nameI.addEventListener('input',check);
+function check(){ $('send').disabled = !(nameI.value.trim().length>1 && phone.value.replace(/\D/g,'').length===11 && $('agree').checked); }
+$('agree').addEventListener('change',check);
+[nameI,phone,$('clinic'),$('city')].forEach(el=>el.addEventListener('keydown',e=>{ if(e.key==='Enter' && !$('send').disabled) submit(); }));
+$('send').addEventListener('click',submit);
+
+function submit(){
+  if(sent) return; sent=true; $('send').disabled=true;
+  answers.name = nameI.value.trim();
+  answers.phone = phone.value.trim();
+  answers.clinic = $('clinic').value.trim();
+  answers.city = $('city').value.trim();
+  answers.role = roleVal;
+  answers.date = new Date().toISOString();
+  try{ localStorage.setItem('quiz_contact',JSON.stringify({name:answers.name,phone:answers.phone,clinic:answers.clinic,city:answers.city,role:answers.role})); }catch(_){}
+  answers.consent = {given:true, at:new Date().toISOString(), doc:'consent '+CONFIG.DOCS_DATE};
+  save('lead'); goal('lead');
+
+  finish();
+}
+
+function finish(){
+  done=true;
+  stage.classList.remove('tall');
+  reveal();
+}
+
+function reveal(){
+  const esc=t=>String(t).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  $('sum').innerHTML = `<b>${esc(answers.name)}</b>, спасибо за ответы. Далее можете ознакомиться с историей клиники, которая смогла решить свои проблемы. Её опыт можно применить и у себя.`;
+  $('rewardTxt').textContent='Гайд открыт'; $('reward').classList.add('open');
+  $('reward').querySelector('svg').innerHTML='<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.5-2"/>';
+  $('metaL').textContent='Готово'; $('metaR').textContent='100%';
+  document.querySelector('.card').classList.add('done');
+  show('sF');
+}
+
+// ===== PDF: окно чтения на сайте и скачивание =====
+const reader=$('reader'), rb=$('readerBody'), rbox=$('rbox');
+let pdfDoc=null, pdfLibP=null, rtoken=0, pageEls=[], renderedW=0, lastFocus=null;
+
+function openReader(){
+  lastFocus=document.activeElement;
+  reader.classList.add('on');
+  document.documentElement.style.overflow='hidden';
+  $('rprog').style.width='0';
+  setTimeout(()=>$('closeR').focus({preventScroll:true}),30);
+}
+function closeReader(){
+  if(!reader.classList.contains('on')) return;
+  rtoken++;
+  reader.classList.remove('on');
+  document.documentElement.style.overflow='';
+  if(lastFocus && lastFocus.focus) try{ lastFocus.focus({preventScroll:true}); }catch(_){}
+}
+function updateProg(){
+  const max=rb.scrollHeight-rb.clientHeight;
+  $('rprog').style.width=(max>0?Math.min(100,rb.scrollTop/max*100):0)+'%';
+  if(rb.classList.contains('pdfv') && pageEls.length){
+    const y=rb.scrollTop+rb.clientHeight*.35; let cur=0;
+    for(let i=0;i<pageEls.length;i++){ if(pageEls[i].offsetTop<=y) cur=i; else break; }
+    if(max-rb.scrollTop<4) cur=pageEls.length-1;
+    $('pgInd').textContent=(cur+1)+' / '+pageEls.length;
+  }
+}
+rb.addEventListener('scroll',updateProg,{passive:true});
+
+function loadPdfJs(){
+  if(pdfLibP) return pdfLibP;
+  pdfLibP=(async()=>{
+    const B='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
+    await new Promise((ok,no)=>{ const s=document.createElement('script'); s.src=B+'pdf.min.js'; s.onload=ok; s.onerror=no; document.head.appendChild(s); });
+    const w=await (await fetch(B+'pdf.worker.min.js')).text();   // воркер через blob, чтобы не упираться в CORS
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc=URL.createObjectURL(new Blob([w],{type:'text/javascript'}));
+    return window.pdfjsLib;
+  })();
+  pdfLibP.catch(()=>{ pdfLibP=null; });
+  return pdfLibP;
+}
+
+async function renderPdf(my, keepPos){
+  const ratio = keepPos && rb.scrollHeight ? rb.scrollTop/rb.scrollHeight : 0;
+  const n=pdfDoc.numPages, list=[];
+  rb.className='pdfv'; rb.innerHTML=''; pageEls=[];
+  const W=rb.clientWidth||800, dpr=Math.min(window.devicePixelRatio||1,2);
+  renderedW=W;
+  for(let i=1;i<=n;i++){
+    const p=await pdfDoc.getPage(i); if(my!==rtoken) return;
+    const base=p.getViewport({scale:1}), vp=p.getViewport({scale:W/base.width*dpr});
+    const cv=document.createElement('canvas'); cv.width=Math.round(vp.width); cv.height=Math.round(vp.height);
+    rb.appendChild(cv); pageEls.push(cv); list.push({p,vp,cv});
+  }
+  rb.scrollTop = ratio*rb.scrollHeight;
+  updateProg();
+  for(const {p,vp,cv} of list){
+    if(my!==rtoken) return;
+    await p.render({canvasContext:cv.getContext('2d'),viewport:vp}).promise;
+    cv.classList.add('ok');
+  }
+}
+
+async function openPdf(){
+  goal('guide_read');
+  const my=++rtoken;
+  rbox.classList.add('pdf'); $('readerTitle').textContent='История клиники'; $('pgInd').textContent='';
+  rb.scrollTop=0;
+  if(!CONFIG.PDF_URL){ rb.className='stub'; rb.textContent='Здесь откроется PDF с историей клиники. Добавьте ссылку в CONFIG.PDF_URL.'; openReader(); return; }
+  rb.className='stub'; rb.innerHTML='<div class="rload"><i></i><span>Открываем историю…</span></div>';
+  openReader();
+  try{
+    const lib=await loadPdfJs();
+    if(!pdfDoc) pdfDoc=await lib.getDocument({url:CONFIG.PDF_URL}).promise;
+    if(my!==rtoken) return;
+    await renderPdf(my,false);
+  }catch(err){
+    if(my!==rtoken) return;
+    console.warn('PDF.js недоступен, показываю встроенный просмотр', err);
+    pageEls=[]; $('pgInd').textContent='';
+    rb.className=''; rb.innerHTML='<iframe src="'+CONFIG.PDF_URL+'#toolbar=0&navpanes=0&view=FitH" title="История клиники"></iframe>';
+  }
+}
+let rz; window.addEventListener('resize',()=>{
+  clearTimeout(rz);
+  rz=setTimeout(()=>{ if(reader.classList.contains('on') && rb.classList.contains('pdfv') && pdfDoc && rb.clientWidth>renderedW*1.2){ renderPdf(++rtoken,true).catch(()=>{}); } },300);
+});
+
+$('open').addEventListener('click',openPdf);
+function fill(t){ return t.replace(/\{\{(\w+)\}\}/g,(m,k)=>CONFIG[k]||m); }
+function openDoc(k){
+  rtoken++; rbox.classList.remove('pdf'); pageEls=[];
+  rb.className='doc'; rb.innerHTML=fill(DOCS[k].html); rb.scrollTop=0;
+  $('readerTitle').textContent=DOCS[k].t; openReader();
+}
+document.addEventListener('click',e=>{ const d=e.target.closest('[data-doc]'); if(d){ e.preventDefault(); openDoc(d.dataset.doc); } });
+$('opLine').textContent = fill('© {{SHORT}}, ИНН {{INN}}, ОГРНИП {{OGRNIP}}');
+$('start').addEventListener('click',()=>{ goal('quiz_start'); go(0); });
+$('closeR').addEventListener('click',closeReader);
+reader.addEventListener('click',e=>{ if(e.target===reader) closeReader(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeReader(); });
+
+// Скачивание: забираем файл blob-ом, чтобы он именно скачался, а не открылся во вкладке
+let dlBusy=false;
+async function downloadPdf(){
+  goal('guide_download');
+  if(!CONFIG.PDF_URL) return alert('Здесь начнётся скачивание. Добавьте ссылку в CONFIG.PDF_URL.');
+  if(dlBusy) return; dlBusy=true;
+  const btns=[$('dl'),$('dl2')], lab=$('dlTxt');
+  btns.forEach(b=>b.classList.add('busy')); lab.textContent='Скачиваем…';
+  const save=href=>{ const a=document.createElement('a'); a.href=href; a.download=CONFIG.PDF_NAME; document.body.appendChild(a); a.click(); a.remove(); };
+  try{
+    const r=await fetch(CONFIG.PDF_URL); if(!r.ok) throw new Error('HTTP '+r.status);
+    const b=await r.blob();
+    const u=URL.createObjectURL(b.type==='application/pdf'?b:new Blob([b],{type:'application/pdf'}));
+    save(u); setTimeout(()=>URL.revokeObjectURL(u),10000);
+  }catch(err){ save(CONFIG.PDF_URL); }
+  btns.forEach(b=>b.classList.remove('busy')); lab.textContent='Готово ✓';
+  setTimeout(()=>{ lab.textContent='Скачать PDF'; dlBusy=false; },1600);
+}
+$('dl').addEventListener('click',downloadPdf);
+$('dl2').addEventListener('click',downloadPdf);
+
+// Автоподстановка контактов, если человек уже проходил квиз
+try{ const c0=JSON.parse(localStorage.getItem('quiz_contact')||'null'); if(c0){ nameI.value=c0.name||''; phone.value=c0.phone||''; $('clinic').value=c0.clinic||''; $('city').value=c0.city||''; if(c0.role){ roleVal=c0.role; document.querySelectorAll('.role').forEach(x=>x.classList.toggle('sel',x.dataset.role===roleVal)); } check(); } }catch(_){}
+
+window.addEventListener('popstate',e=>{ if(done) return; go(e.state && typeof e.state.s==='number' ? e.state.s : -1, true); });
+history.replaceState({s:-1},'');
+go(-1);
+</script>
+</body>
+</html>
